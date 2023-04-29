@@ -4,7 +4,6 @@ import 'package:flutter_instagram_project/Screens/screen_account.dart';
 import 'package:flutter_instagram_project/Screens/screen_addpost.dart';
 import 'package:flutter_instagram_project/Screens/screen_viewlikes.dart';
 import 'package:flutter_instagram_project/Screens/screen_search.dart';
-import 'package:flutter_instagram_project/Classes/class.dart';
 import 'package:sizer/sizer.dart';
 
 class homeScreen extends StatefulWidget {
