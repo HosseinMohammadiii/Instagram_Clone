@@ -356,30 +356,3 @@ Widget _storyInfo() {
     ),
   );
 }
-
-Widget _textStory() {
-  List<String> text = [
-    'Your story',
-    'Mahaa.can...',
-    'hosseinmo...',
-    'bts.girl',
-    'anime.boy',
-  ];
-  return SingleChildScrollView(
-    scrollDirection: Axis.horizontal,
-    child: Row(
-      children: [
-        for (var t in text)
-          Padding(
-            padding: const EdgeInsets.only(left: 17),
-            child: textInfo(
-              t,
-              Colors.white,
-              10.sp,
-              'GB',
-            ),
-          ),
-      ],
-    ),
-  );
-}
