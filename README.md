@@ -1,5 +1,5 @@
 <h1>Description</h1>
-<p>This program has a user interface similar to Instagram</p>
+<p>This program has a ui similar to Instagram</p>
 <h2>Some Program Pages</h1>
 <p><img src="https://user-images.githubusercontent.com/132124730/235515744-74b0c02b-d1a7-43bd-a564-584f03ea8720.jpg" alt="Login_Screen" width="230" height="400">
 <img src="https://user-images.githubusercontent.com/132124730/235514985-d1d3d1e7-c998-49cc-b072-0901381001a2.jpg" alt="Main_Image" width="230" height="400">
