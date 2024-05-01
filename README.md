@@ -15,4 +15,7 @@
 <h4><a href="https://pub.dev/packages/hexcolor">• hexcolor</a></h4>
 <h1>Links</h1>
 <!--<h4><a href="https://linkedin.com/in/hossein-mohammadi-287391274/">• Linkedin</a></h4>-->
-<h4><a href="https://instagram.com/hosseinmohammadi.dev">• Instagram</a></h4>
+<ul>
+<li><h4><a href="https://instagram.com/hosseinmohammadi.dev">Instagram</a></h4></li>
+<li><h4><a href="https://t.me/Hossein_M_20">Telegram</a></h4></li>
+</ul>
