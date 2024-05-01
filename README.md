@@ -10,5 +10,5 @@
 <h4><a href="https://pub.dev/packages/flutter_staggered_grid_view">• flutter_staggered_grid_view</a></h4>
 <h4><a href="https://pub.dev/packages/hexcolor">• hexcolor</a></h4>
 <h1>Links</h1>
-<h4><a href="https://linkedin.com/in/hossein-mohammadi-287391274/">• Linkedin</a></h4>
+<!--<h4><a href="https://linkedin.com/in/hossein-mohammadi-287391274/">• Linkedin</a></h4>-->
 <h4><a href="https://instagram.com/hosseinmohammadi.dev">• Instagram</a></h4>
