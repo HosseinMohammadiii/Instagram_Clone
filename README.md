@@ -10,7 +10,8 @@
 <img src="https://github.com/HosseinMohammadiii/Instagram_Clone/assets/132124730/073c1c18-bc15-4ba2-9146-8ed7154150ee" alt="Account_Screen" width="230" height="400">
 </p>
 <h1>Packages Usage</h1>
-<h4><a href="https://pub.dev/packages/sizer">• sizer</a></h4>
+<ul>
+<li><h4><a href="https://pub.dev/packages/sizer">• sizer</a></h4></li>
 <h4><a href="https://pub.dev/packages/flutter_staggered_grid_view">• flutter_staggered_grid_view</a></h4>
 <h4><a href="https://pub.dev/packages/hexcolor">• hexcolor</a></h4>
 <h1>Links</h1>
