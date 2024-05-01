@@ -1,5 +1,5 @@
 <h1>Description</h1>
-<p>This program has a UI/Ux similar to Instagram</p>
+<p>This program has a UI/Ux similar to Instagram.</p>
 <h2>Program Screens</h1>
 <p>
 <img src="https://github.com/HosseinMohammadiii/Instagram_Clone/assets/132124730/7bf366fa-5e7b-4f0d-b4d4-839fbb41e4af" alt="Login_Screen" width="230" height="400">
