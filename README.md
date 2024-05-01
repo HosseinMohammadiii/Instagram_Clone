@@ -1,9 +1,13 @@
 <h1>Description</h1>
-<p>This program has a ui similar to Instagram</p>
-<h2>Program Pages</h1>
-<p><img src="https://user-images.githubusercontent.com/132124730/235515744-74b0c02b-d1a7-43bd-a564-584f03ea8720.jpg" alt="Login_Screen" width="230" height="400">
-<img src="https://user-images.githubusercontent.com/132124730/235514985-d1d3d1e7-c998-49cc-b072-0901381001a2.jpg" alt="Main_Image" width="230" height="400">
-<img src="https://user-images.githubusercontent.com/132124730/235514990-e2f2a13b-07b8-44eb-9c18-c0e62275b959.jpg" alt="Account_Screen" width="230" height="400">
+<p>This program has a UI/Ux similar to Instagram</p>
+<h2>Program Screens</h1>
+<p>
+<img src="https://github.com/HosseinMohammadiii/Instagram_Clone/assets/132124730/7bf366fa-5e7b-4f0d-b4d4-839fbb41e4af" alt="Login_Screen" width="230" height="400">
+<img src="https://github.com/HosseinMohammadiii/Instagram_Clone/assets/132124730/95a6ed36-9488-478c-99fc-7e8e5962db73" alt="Home_Screen" width="230" height="400"">
+<img src="https://github.com/HosseinMohammadiii/Instagram_Clone/assets/132124730/90efb7f7-6d0e-47b5-bdf7-101a413a7c09" alt="Search_Screen" width="230" height="400">
+<img src="https://github.com/HosseinMohammadiii/Instagram_Clone/assets/132124730/2af610e7-eb4a-4ce0-9479-e4cc139cfb0c" alt="Add_Post_Screen" width="230" height="400">
+<img src="https://github.com/HosseinMohammadiii/Instagram_Clone/assets/132124730/860cdd8f-fbf6-4166-9b1c-548e9892a066" alt="Display_Follow_Screen" width="230" height="400">
+<img src="https://github.com/HosseinMohammadiii/Instagram_Clone/assets/132124730/073c1c18-bc15-4ba2-9146-8ed7154150ee" alt="Account_Screen" width="230" height="400">
 </p>
 <h1>Packages Usage</h1>
 <h4><a href="https://pub.dev/packages/sizer">• sizer</a></h4>
