@@ -36,6 +36,20 @@ class shareBottomSheet extends StatelessWidget {
   }
 
   Widget _diplaycontectshare(BuildContext context) {
+    List<String> userName = [
+      'Hossein',
+      'Alex',
+      'Noora',
+      'Pinoo',
+      'Haland',
+      'Reza',
+      'Nima',
+      'Sara',
+      'Lina',
+      'Rose',
+      'Moon',
+      'Parsa',
+    ];
     return Stack(
       alignment: Alignment.bottomCenter,
       children: [
@@ -122,38 +136,41 @@ class shareBottomSheet extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 10.h),
               sliver: SliverGrid(
                 delegate: SliverChildBuilderDelegate(
+                  childCount: 12,
                   (context, index) {
                     return Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Container(
-                          width: 15.w,
-                          height: 8.h,
-                          child: Padding(
-                            padding: const EdgeInsets.all(4),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(3.w),
-                              child: Image.asset(
-                                'images/search$index.png',
-                                fit: BoxFit.cover,
+                          width: 18.w,
+                          height: 15.h,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                height: 10.h,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(3.w),
+                                  child: Image.asset(
+                                    'images/search$index.png',
+                                    scale: 0.2.h,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                               ),
-                            ),
+                              textInfo(
+                                  userName[index], Colors.white, 9.sp, 'GB'),
+                            ],
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 4.w, vertical: 1.h),
-                          child: textInfo('UserName', Colors.white, 9.sp, 'GB'),
                         ),
                       ],
                     );
                   },
-                  childCount: 12,
                 ),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 4,
                   mainAxisExtent: 15.h,
-                  crossAxisSpacing: 3.w,
+                  crossAxisSpacing: 1.w,
                 ),
               ),
             ),

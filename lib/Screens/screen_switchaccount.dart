@@ -71,7 +71,7 @@ class _switchAccountState extends State<switchAccount> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(3.w),
                                 image: DecorationImage(
-                                    image: AssetImage('images/Me.jpg'),
+                                    image: AssetImage('images/search7.png'),
                                     fit: BoxFit.cover),
                               ),
                             ),

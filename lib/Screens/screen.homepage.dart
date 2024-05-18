@@ -36,14 +36,18 @@ class _homePageScreenState extends State<homePageScreen> {
               18.sp,
               'GB',
             ),
+            const Spacer(),
+            Image.asset('images/Group 39.png'),
           ],
         ),
-        actions: [
-          Image.asset('images/Group 39.png'),
-        ],
       ),
       body: CustomScrollView(
         slivers: [
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 5,
+            ),
+          ),
           SliverToBoxAdapter(
             child: _storyInfo(),
           ),
@@ -300,7 +304,6 @@ Widget _storyInfo() {
     'anime.jpg',
   ];
   List<String> text = [
-    'Your Story',
     'Mahaa.can...',
     'hosseinmo...',
     'bts.girl',
@@ -314,7 +317,7 @@ Widget _storyInfo() {
         SizedBox(
           width: 3.w,
         ),
-        for (var i in images)
+        for (var i = 0; i < images.length; i++)
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 15),
             child: Column(
@@ -334,7 +337,7 @@ Widget _storyInfo() {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(3.w),
                       child: Image.asset(
-                        'images/$i',
+                        'images/${images[i]}',
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -344,7 +347,7 @@ Widget _storyInfo() {
                   height: 1.h,
                 ),
                 textInfo(
-                  'User Name',
+                  text[i],
                   Colors.white,
                   10.sp,
                   'GB',

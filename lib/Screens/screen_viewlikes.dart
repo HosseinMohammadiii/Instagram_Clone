@@ -51,6 +51,7 @@ class _screenViewLikesState extends State<screenViewLikes>
               indicatorPadding: EdgeInsets.symmetric(horizontal: 8.w),
               labelStyle: TextStyle(
                 fontFamily: 'GB',
+                color: Colors.white,
                 fontSize: 14.sp,
               ),
               tabs: [
@@ -101,7 +102,7 @@ class _screenViewLikesState extends State<screenViewLikes>
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    _activityStatus(ActivityStatus.following),
+                    widgetBoxFollowing(),
                     SizedBox(
                       height: 2.h,
                     ),
@@ -175,11 +176,11 @@ class _screenViewLikesState extends State<screenViewLikes>
                     SizedBox(
                       height: 2.h,
                     ),
-                    _activityStatus(ActivityStatus.following),
+                    widgetBoxFollowing(),
                     SizedBox(
                       height: 2.h,
                     ),
-                    _activityStatus(ActivityStatus.following),
+                    widgetBoxFollowing(),
                     SizedBox(
                       height: 2.h,
                     ),
@@ -200,104 +201,12 @@ class _screenViewLikesState extends State<screenViewLikes>
   ) {
     switch (status) {
       case ActivityStatus.follow:
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(1.w),
-                  child: Container(
-                    width: 2.w,
-                    height: 2.w,
-                    color: Color(0xffF35383),
-                  ),
-                ),
-                Container(
-                  width: 10.w,
-                  height: 5.h,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(2.5.w),
-                    child: Image.asset(
-                      'images/Me.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        textInfo('hosseinmo...', Colors.white, 12.sp, 'GB'),
-                        SizedBox(
-                          width: 2.w,
-                        ),
-                        textInfo('Started Following', Color(0xffC5C5C5), 12.sp,
-                            'GM'),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 1.w,
-                    ),
-                    Row(
-                      children: [
-                        textInfo('you', Color(0xffC5C5C5), 12.sp, 'GM'),
-                        SizedBox(
-                          width: 2.w,
-                        ),
-                        textInfo('3min', Color(0xffC5C5C5), 10.sp, 'GB'),
-                      ],
-                    ),
-                  ],
-                ),
-                Container(
-                  width: 20.w,
-                  height: 5.h,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(2.w),
-                    border: isfollow == true
-                        ? Border.all(color: Color(0xffC5C5C5), width: 0.7.w)
-                        : null,
-                    color: isfollow == false
-                        ? Color(0xffF35383)
-                        : Colors.transparent,
-                  ),
-                  child: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        isfollow = true;
-                      });
-                    },
-                    onTapDown: (details) {
-                      setState(() {
-                        isfollow == true
-                            ? Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => directScreen(),
-                                ),
-                              )
-                            : null;
-                      });
-                    },
-                    child: textInfo(
-                        isfollow == false ? 'Follow' : 'Message',
-                        isfollow == false ? Colors.white : Color(0xffC5C5C5),
-                        12.sp,
-                        'GB'),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        );
+        return widgetBoxFollowing();
       case ActivityStatus.followweek:
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            widgetBoxFollowing(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -309,43 +218,48 @@ class _screenViewLikesState extends State<screenViewLikes>
                     color: Color(0xffF35383),
                   ),
                 ),
-                Container(
-                  width: 10.w,
-                  height: 5.h,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(2.5.w),
-                    child: Image.asset(
-                      'images/Me.jpg',
-                      fit: BoxFit.cover,
+                SizedBox(
+                  width: 3,
+                ),
+                Expanded(
+                  child: Container(
+                    width: 10.w,
+                    height: 5.h,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(2.5.w),
+                      child: Image.asset(
+                        'images/Me.jpg',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        textInfo('hosseinmo...', Colors.white, 12.sp, 'GB'),
-                        SizedBox(
-                          width: 2.w,
-                        ),
-                        textInfo('Started Following', Color(0xffC5C5C5), 12.sp,
-                            'GM'),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 1.w,
-                    ),
-                    Row(
-                      children: [
-                        textInfo('you', Color(0xffC5C5C5), 12.sp, 'GM'),
-                        SizedBox(
-                          width: 2.w,
-                        ),
-                        textInfo('3min', Color(0xffC5C5C5), 10.sp, 'GB'),
-                      ],
-                    ),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          textInfo('hosseinmo...', Colors.white, 12.sp, 'GB'),
+                          SizedBox(
+                            width: 2.w,
+                          ),
+                          textInfo('Started Following', Color(0xffC5C5C5),
+                              12.sp, 'GM'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          textInfo('you', Color(0xffC5C5C5), 12.sp, 'GM'),
+                          SizedBox(
+                            width: 2.w,
+                          ),
+                          textInfo('3min', Color(0xffC5C5C5), 10.sp, 'GB'),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   width: 20.w,
@@ -393,27 +307,29 @@ class _screenViewLikesState extends State<screenViewLikes>
         );
       case ActivityStatus.following:
         return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(1.w),
-                  child: Container(
-                    width: 2.w,
-                    height: 2.w,
+                Container(
+                  width: 2.w,
+                  height: 1.2.h,
+                  margin: EdgeInsets.symmetric(horizontal: 3),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
                     color: Color(0xffF35383),
                   ),
                 ),
-                Container(
-                  width: 10.w,
-                  height: 5.h,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(2.5.w),
-                    child: Image.asset(
-                      'images/Me.jpg',
-                      fit: BoxFit.cover,
+                Expanded(
+                  child: Container(
+                    width: 10.w,
+                    height: 5.h,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(2.5.w),
+                      child: Image.asset(
+                        'images/Me.jpg',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
@@ -429,9 +345,6 @@ class _screenViewLikesState extends State<screenViewLikes>
                         textInfo('Started Following', Color(0xffC5C5C5), 12.sp,
                             'GM'),
                       ],
-                    ),
-                    SizedBox(
-                      height: 1.w,
                     ),
                     Row(
                       children: [
@@ -473,37 +386,64 @@ class _screenViewLikesState extends State<screenViewLikes>
         );
 
       case ActivityStatus.like:
-        return Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(1.w),
-              child: Container(
-                width: 2.w,
-                height: 2.w,
-                color: Color(0xffF35383),
-              ),
-            ),
-            Container(
-              width: 10.w,
-              height: 5.h,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(2.5.w),
-                child: Image.asset(
-                  'images/Me.jpg',
-                  fit: BoxFit.cover,
+        return Container(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(1.w),
+                child: Container(
+                  width: 2.w,
+                  height: 2.w,
+                  color: Color(0xffF35383),
                 ),
               ),
-            ),
-            textInfo('hosseinmo...', Colors.white, 12.sp, 'GB'),
-            textInfo('Liked your post', Color(0xffC5C5C5), 12.sp, 'GM'),
-            textInfo('5min', Color(0xffC5C5C5), 12.sp, 'GB'),
-            Container(
-              width: 11.w,
-              height: 5.h,
-              alignment: Alignment.center,
-              child: GestureDetector(
-                onTap: () {},
+              SizedBox(
+                width: 3,
+              ),
+              Expanded(
+                child: Container(
+                  height: 5.h,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(2.5.w),
+                    child: Image.asset(
+                      'images/Me.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  children: [
+                    textInfo('hosseinmo...', Colors.white, 12.sp, 'GB'),
+                    SizedBox(
+                      width: 3,
+                    ),
+                    textInfo('Liked your post', Color(0xffC5C5C5), 12.sp, 'GM'),
+                    SizedBox(
+                      width: 3,
+                    ),
+                    textInfo('5min', Color(0xffC5C5C5), 12.sp, 'GB'),
+                  ],
+                ),
+              ),
+              // SizedBox(
+              //   width: 24,
+              // ),
+              Container(
+                width: 16.w,
+                height: 5.h,
+                alignment: Alignment.centerRight,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(2.w),
+                  border: Border.all(
+                    color: Colors.transparent,
+                    width: 0.2.w,
+                  ),
+                ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(2.w),
                   child: Image.asset(
@@ -512,8 +452,8 @@ class _screenViewLikesState extends State<screenViewLikes>
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         );
 
       default:
@@ -534,5 +474,89 @@ class _screenViewLikesState extends State<screenViewLikes>
           ),
         );
     }
+  }
+
+  Container widgetBoxFollowing() {
+    return Container(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(1.w),
+            child: Container(
+              width: 2.w,
+              height: 2.w,
+              color: Color(0xffF35383),
+            ),
+          ),
+          SizedBox(
+            width: 3,
+          ),
+          Expanded(
+            child: Container(
+              height: 5.h,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(2.5.w),
+                child: Image.asset(
+                  'images/Me.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    textInfo('hosseinmo...', Colors.white, 12.sp, 'GB'),
+                    SizedBox(
+                      width: 2.w,
+                    ),
+                    textInfo(
+                        'Started Following', Color(0xffC5C5C5), 12.sp, 'GM'),
+                  ],
+                ),
+                Row(
+                  children: [
+                    textInfo('you', Color(0xffC5C5C5), 12.sp, 'GM'),
+                    SizedBox(
+                      width: 2.w,
+                    ),
+                    textInfo('3min', Color(0xffC5C5C5), 10.sp, 'GB'),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: 20.w,
+            height: 5.h,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(2.w),
+              border: Border.all(
+                color: Color(0xffC5C5C5),
+                width: 0.7.w,
+              ),
+            ),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => directScreen(),
+                  ),
+                );
+              },
+              child: textInfo('Message', Color(0xffC5C5C5), 12.sp, 'GB'),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

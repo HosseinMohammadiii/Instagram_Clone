@@ -69,43 +69,48 @@ class _dispalyFollowingState extends State<dispalyFollowing> {
                     color: Color(0xffF35383),
                   ),
                 ),
-                Container(
-                  width: 10.w,
-                  height: 5.h,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(2.5.w),
-                    child: Image.asset(
-                      'images/Me.jpg',
-                      fit: BoxFit.cover,
+                SizedBox(
+                  width: 3,
+                ),
+                Expanded(
+                  child: Container(
+                    width: 10.w,
+                    height: 5.h,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(2.5.w),
+                      child: Image.asset(
+                        'images/Me.jpg',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        textInfo('hosseinmo...', Colors.white, 12.sp, 'GB'),
-                        SizedBox(
-                          width: 2.w,
-                        ),
-                        textInfo('Started Following', Color(0xffC5C5C5), 12.sp,
-                            'GM'),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 1.w,
-                    ),
-                    Row(
-                      children: [
-                        textInfo('you', Color(0xffC5C5C5), 12.sp, 'GM'),
-                        SizedBox(
-                          width: 2.w,
-                        ),
-                        textInfo('3min', Color(0xffC5C5C5), 10.sp, 'GB'),
-                      ],
-                    )
-                  ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          textInfo('hosseinmo...', Colors.white, 12.sp, 'GB'),
+                          SizedBox(
+                            width: 2.w,
+                          ),
+                          textInfo('Started Following', Color(0xffC5C5C5),
+                              12.sp, 'GM'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          textInfo('you', Color(0xffC5C5C5), 12.sp, 'GM'),
+                          SizedBox(
+                            width: 2.w,
+                          ),
+                          textInfo('3min', Color(0xffC5C5C5), 10.sp, 'GB'),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
                 Container(
                   width: 20.w,
